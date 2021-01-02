@@ -20,4 +20,9 @@ export default [{
   input: 'src/index.js',
   output,
   plugins,
+}, {
+  input: 'src/cli.js',
+  output: { ...output, ...{ banner: '#!/usr/bin/env node' } },
+  plugins,
+  external: ['@reuters-graphics/ejector'],
 }];

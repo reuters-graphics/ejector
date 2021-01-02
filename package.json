@@ -2,6 +2,9 @@
   "name": "@reuters-graphics/ejector",
   "version": "0.0.1",
   "main": "dist/index.js",
+  "bin": {
+    "ejector": "dist/cli.js"
+  },
   "repository": "https://github.com/reuters-graphics/ejector",
   "author": "Jon McClure <jon.r.mcclure@gmail.com>",
   "license": "MIT",
@@ -17,16 +20,26 @@
     "test": "yarn build && mocha"
   },
   "devDependencies": {
+    "@reuters-graphics/chart-module-globetrotter": "https://github.com/reuters-graphics/chart-module-globetrotter.git",
     "@reuters-graphics/eslint-config": "^0.0.2",
     "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^8.0.1",
+    "@rollup/plugin-node-resolve": "^11.0.1",
     "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
     "expect.js": "^0.3.1",
+    "memfs": "^3.2.0",
     "mocha": "^7.1.2",
     "rollup": "^2.10.5",
     "rollup-plugin-node-externals": "^2.2.0",
     "rollup-plugin-size-snapshot": "^0.12.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "fast-glob": "^3.2.4",
+    "fs-extra": "^9.0.1",
+    "fuse.js": "^6.4.5",
+    "prompts": "^2.4.0",
+    "update-notifier": "^5.0.1",
+    "yargs": "^16.2.0"
+  }
 }
