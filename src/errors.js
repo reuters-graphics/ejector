@@ -21,3 +21,11 @@ export class DependencyNotFoundError extends Error {
     Error.captureStackTrace(this, this.constructor);
   }
 }
+
+export class NoEjectableFilesFoundError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = this.constructor.name;
+    Error.captureStackTrace(this, this.constructor);
+  }
+}

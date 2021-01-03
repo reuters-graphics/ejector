@@ -20,6 +20,7 @@
     "test": "yarn build && mocha"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "@reuters-graphics/chart-module-globetrotter": "https://github.com/reuters-graphics/chart-module-globetrotter.git",
     "@reuters-graphics/eslint-config": "^0.0.2",
     "@rollup/plugin-json": "^4.1.0",
