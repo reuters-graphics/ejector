@@ -171,8 +171,10 @@ class Ejector {
       type: 'multiselect',
       name: 'types',
       message: 'Which files do you want to eject into your working directory?',
+      hint: chalk`\n{green ←/→ or space to select}`,
+      instructions: false,
       choices,
-    });
+    }, { onCancel: () => { process.exit(0); } });
     return types;
   }
 
