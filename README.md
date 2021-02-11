@@ -8,26 +8,32 @@ Eject a dependency's source files from your `node_modules` directly into your wo
 
 ## Why this?
 
-TK.
+Sometimes at Reuters we need to yank things out of node_modules.
+
+For example, we write [reusable charts](https://github.com/reuters-graphics/awesome-charts) as npm-installable packages. BUT when a prefab graphic doesn't quite do what we need it to do, we want to start from the prewritten code and add a few changes directly in whatever project we're working in.
+
+Ejector is a quick CLI to pull a package's source files into our working directory. It'll snag JS, CSS, SCSS, LESS and font files and stick them directly into your development directory.
+
+Handy.
 
 ## Quickstart
 
-```
-$ yarn global add @reuters-graphics/ejector
+```bash
+yarn global add @reuters-graphics/ejector
 ```
 
 ### CLI
 
 Run ejector from the root of your project, and it will ask you which dependency you'd like to eject.
 
-```
-$ ejector
+```bash
+ejector
 ```
 
 You can also supply a filter to limit the dependency options.
 
-```
-$ ejector -f @reuters-graphics
+```bash
+ejector -f @reuters-graphics
 ```
 
 ### Module
@@ -43,9 +49,8 @@ await ejector.eject();
 await ejector.eject('@reuters-graphics');
 ```
 
-
 ## Testing
 
-```
-$ yarn build && yarn test
+```bash
+yarn build && yarn test
 ```
